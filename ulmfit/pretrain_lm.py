@@ -190,7 +190,7 @@ class LMHyperParams:
 
         self.save_info()
         # do we need to return `learn'? it adds noise to Fire output
-        #return learn
+        return learn
 
     def create_lm_learner(self, data_lm, dps=None, label_smoothing_eps=0.0, **kwargs):
         assert self.bidir == False, "bidirectional model is not yet supported"
