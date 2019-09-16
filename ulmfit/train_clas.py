@@ -98,8 +98,8 @@ class CLSHyperParams(LMHyperParams):
         print(f"Saving models at {learn.path / learn.model_dir}")
         learn.save('cls_last', with_opt=False)
         learn.save('cls_best', with_opt=False) # we don't use early stopping for the time being
-        del learn
-        return self.validate_cls('cls_best', bs=bs, data_cls=data_clas, data_tst=data_tst, learn=None)
+        self.validate_cls('cls_best', bs=bs, data_cls=data_clas, data_tst=data_tst, learn=None)
+        return learn
 
     def validate_cls(self, save_name='cls_best', bs=40, data_cls=None, data_tst=None, learn=None, label_smoothing_eps=0.0):
         if data_tst is None:
