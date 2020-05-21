@@ -96,7 +96,7 @@ class LMHyperParams:
         print('Max vocab:', self.max_vocab)
         print('Cache dir:', self.cache_dir)
         print('Model dir:', self.model_dir)
-        if self.nh is None: self.nh = 1550 if self.qrnn else 1150
+        if self.nh is None: self.nh = 1552 if self.qrnn else 1152
         if self.name is None: self.name = self.lang
 
     @property
